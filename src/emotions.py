@@ -12,6 +12,11 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 
+# # command line argument
+ap = argparse.ArgumentParser()
+ap.add_argument("--mode",help="train/display")
+mode = ap.parse_args().mode
+
 
 # plots accuracy and loss curves
 def plot_model_history(model_history):
